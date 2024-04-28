@@ -1,16 +1,17 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿// MIT License
+
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Module")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("DnnReactDemo")]
+[assembly: AssemblyDescription("DNN React API Demo")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Module")]
-[assembly: AssemblyCopyright("Copyright ©  2024")]
+[assembly: AssemblyProduct("DNN React API Demo")]
+[assembly: AssemblyCopyright("Copyright © Mostafa Moafi 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
