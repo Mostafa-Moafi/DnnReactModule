@@ -1,0 +1,182 @@
+<dotnetnuke version="5.0" type="Package">
+  <packages>
+    <package name="DnnReactDemo" type="Module" version="01.00.00">
+      <friendlyName>DNN React Demo</friendlyName>
+      <description>Professional REST API and React DNN Module</description>
+      <owner>
+        <name>Mostafa Moafi</name>
+        <organization>IMSWebGroup</organization>
+        <url>https://mostafamoafi.ir/</url>
+        <email>moafimostafa80@gmail.com</email>
+      </owner>
+      <license src="LICENSE">
+      </license>
+      <releaseNotes src="ReleaseNotes.html" />
+      <azureCompatible>True</azureCompatible>
+      <dependencies>
+        <dependency type="coreVersion">09.13.03</dependency>
+      </dependencies>
+      <components>
+        <component type="Script">
+          <scripts>
+            <basePath>DesktopModules\DnnReactDemo\SqlDataProviders</basePath>
+            <script type="Install">
+              <name>01.00.00.SqlDataProvider</name>
+              <version>01.00.00</version>
+            </script>
+          </scripts>
+        </component>
+        <component type="Assembly">
+          <assemblies>
+            <assembly>
+              <name>AutoMapper.dll</name>
+              <path>bin</path>
+            </assembly>
+            <assembly>
+              <name>DnnReactDemo.dll</name>
+              <path>bin</path>
+            </assembly>
+            <assembly>
+              <name>EntityFramework.dll</name>
+              <path>bin</path>
+            </assembly>
+            <assembly>
+              <name>EntityFramework.SqlServer.dll</name>
+              <path>bin</path>
+            </assembly>
+            <assembly>
+              <name>NSwag.Annotations.dll</name>
+              <path>bin</path>
+            </assembly>
+          </assemblies>
+        </component>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>Statistic_View</moduleName>
+            <foldername>Benvis/Statistic_API</foldername>
+            <businessControllerClass>Statistic_API.Utilities.ConfigurationModule, Statistic_API</businessControllerClass>
+            <supportedFeatures>
+              <supportedFeature type="Searchable" />
+            </supportedFeatures>
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>Statistic_View</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/Benvis/Statistic_API/Pages/StatisticView.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Settings</controlKey>
+                    <controlSrc>DesktopModules/Benvis/Statistic_API/Pages/Settings/StatisticViewSetting.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Settings</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+          <eventMessage>
+            <processorType>DotNetNuke.Entities.Modules.EventMessageProcessor, DotNetNuke</processorType>
+            <processorCommand>UpgradeModule</processorCommand>
+            <attributes>
+              <businessControllerClass>Statistic_API.Utilities.ConfigurationModule,Statistic_API</businessControllerClass>
+              <desktopModuleID>[DESKTOPMODULEID]</desktopModuleID>
+              <upgradeVersionsList>02.00.56</upgradeVersionsList>
+            </attributes>
+          </eventMessage>
+        </component>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules/Benvis/Statistic_API</basePath>
+            <resourceFile>
+              <name>resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+      </components>
+
+      <components>
+        <component type="Assembly">
+          <assemblies>
+            <assembly>
+              <name>DnnReactDemo.dll</name>
+              <path>bin</path>
+            </assembly>
+            <assembly>
+              <name>EntityFramework.dll</name>
+              <path>bin</path>
+              <version>6.4.4</version>
+            </assembly>
+            <assembly>
+              <name>EntityFramework.SqlServer.dll</name>
+              <path>bin</path>
+              <version>6.4.4</version>
+            </assembly>
+            <assembly>
+              <name>NSwag.Annotations.dll</name>
+              <path>bin</path>
+              <version>13.15.5</version>
+            </assembly>
+            <assembly>
+              <name>AutoMapper.dll</name>
+              <path>bin</path>
+            </assembly>
+          </assemblies>
+        </component>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>DNN React API Demo</moduleName>
+            <foldername>DnnReactDemo</foldername>
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>DNN React API Demo</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/DnnReactDemo/resources/views/index.html</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+        <component type="Cleanup" version="01.00.00" glob="DesktopModules/DnnReactDemo/resources/**/*" />
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules/DnnReactDemo/resources</basePath>
+            <resourceFile>
+              <name>resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>bin</basePath>
+            <resourceFile>
+              <name>symbols.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>

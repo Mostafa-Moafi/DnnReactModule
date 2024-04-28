@@ -1,0 +1,13 @@
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Mission]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+BEGIN
+CREATE TABLE [dbo].[Mission]
+(
+[Id] [int] NOT NULL IDENTITY(1, 1),
+[Title] [nvarchar] (max)  NOT NULL,
+[Description] [nvarchar] (max)  NULL,
+[CreatedDate] [datetime2] NULL DEFAULT (getdate()),
+[UpdatedDate] [datetime2] NULL,
+) ON [PRIMARY]
+ALTER TABLE [dbo].[Mission] ADD CONSTRAINT [PK_Mission] PRIMARY KEY CLUSTERED ([Id]) ON [PRIMARY]
+END
+GO

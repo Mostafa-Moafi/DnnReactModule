@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10231BA9-FC7D-41E5-8F7E-8739D7D0C455}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DnnReactDemo</RootNamespace>
+    <AssemblyName>DnnReactDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper">
+      <Version>10.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetNuke.Core">
+      <Version>9.13.3</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetNuke.Instrumentation">
+      <Version>9.13.3</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetNuke.Web">
+      <Version>9.13.3</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetNuke.Web.Mvc">
+      <Version>9.13.3</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetNuke.WebApi">
+      <Version>9.13.3</Version>
+    </PackageReference>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core">
+      <Version>5.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.WebApi.WebHost">
+      <Version>5.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers">
+      <Version>6.0.0</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\MissionController.cs" />
+    <Compile Include="Controllers\ModuleApiController.cs" />
+    <Compile Include="Controllers\ServiceRouteMapper.cs" />
+    <Compile Include="Data\IRepositories\IMissionRepository.cs" />
+    <Compile Include="Data\IRepositories\IRepository.cs" />
+    <Compile Include="Data\IRepositories\IRepositoryManager.cs" />
+    <Compile Include="Data\ModuleDbContext.cs.cs" />
+    <Compile Include="Data\Repositories\MissionRepository.cs" />
+    <Compile Include="Data\Repositories\RepositoryManager.cs" />
+    <Compile Include="Data\Repositories\Repository.cs" />
+    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\Mission.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="resources\App_LocalResources\ModelValidation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelValidation.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\IMissionService.cs" />
+    <Compile Include="Services\IServiceManager.cs" />
+    <Compile Include="Services\MissionService.cs" />
+    <Compile Include="Services\ServiceManager.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Utilities\API\ApiResult.cs" />
+    <Compile Include="Utilities\API\ApiResultStatusCode.cs" />
+    <Compile Include="Utilities\Assert.cs" />
+    <Compile Include="Utilities\ConfigurationModule.cs" />
+    <Compile Include="Utilities\CustomMapping\AutoMapperConfiguration.cs" />
+    <Compile Include="Utilities\CustomMapping\CustomMappingProfile.cs" />
+    <Compile Include="Utilities\CustomMapping\IHaveCustomMapping.cs" />
+    <Compile Include="Utilities\Exceptions\AppException.cs" />
+    <Compile Include="Utilities\Exceptions\BadRequestException.cs" />
+    <Compile Include="Utilities\Exceptions\NotFoundException.cs" />
+    <Compile Include="Utilities\FiltersAttribute\ModuleExceptionAttribute.cs" />
+    <Compile Include="Utilities\FiltersAttribute\ResultAuthorizeAttribute.cs" />
+    <Compile Include="Utilities\FiltersAttribute\ValidateModelAttribute.cs" />
+    <Compile Include="Utilities\GlobalParameter.cs" />
+    <Compile Include="Utilities\Helper\StringHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="app.config" />
+    <None Include="LICENSE" />
+    <None Include="README.md" />
+    <None Include="SqlDataProviders\01.00.00.SqlDataProvider" />
+    <Resource Include="manifest.dnn" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="ReleaseNotes.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\App_LocalResources\ModelValidation.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ModelValidation.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
