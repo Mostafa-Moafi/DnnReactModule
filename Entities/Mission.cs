@@ -1,4 +1,5 @@
 ﻿// MIT License
+using DotNetNuke.Entities.Users;
 using System.ComponentModel.DataAnnotations;
 
 namespace DnnReactDemo.Entities
@@ -9,7 +10,12 @@ namespace DnnReactDemo.Entities
     public class Mission : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the item name.
+        /// Gets or sets the item Title.
+        /// </summary>
+        [Required]
+        public int UserId { get; set; }
+        /// <summary>
+        /// Gets or sets the item Title.
         /// </summary>
         [Required]
         public string Title { get; set; }

@@ -3,6 +3,7 @@ BEGIN
 CREATE TABLE [dbo].[Mission]
 (
 [Id] [int] NOT NULL IDENTITY(1, 1),
+[UserId] [int] NOT NULL,
 [Title] [nvarchar] (max)  NOT NULL,
 [Description] [nvarchar] (max)  NULL,
 [CreatedDate] [datetime2] NULL DEFAULT (getdate()),

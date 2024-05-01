@@ -2,6 +2,10 @@
 
 using DnnReactDemo.Data.IRepositories;
 using DnnReactDemo.Entities;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace DnnReactDemo.Data.Repositories
 {
@@ -13,5 +17,14 @@ namespace DnnReactDemo.Data.Repositories
             _context = context;
         }
 
+        public async Task<Mission> GetMissionByUserIdAsync(int missionId, int userId)
+        {
+            return await _context.Missions.FirstOrDefaultAsync(x => x.Id == missionId && x.UserId == userId);
+        }
+
+        public async Task<IList<Mission>> GetMissionByUserIdAsync(int userId)
+        {
+            return await _context.Missions.Where(x => x.UserId == userId).ToListAsync();
+        }
     }
 }

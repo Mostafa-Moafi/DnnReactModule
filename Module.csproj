@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -29,7 +28,9 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\DnnReactDemo.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper">
@@ -79,15 +80,13 @@
     <Compile Include="Data\Repositories\MissionRepository.cs" />
     <Compile Include="Data\Repositories\RepositoryManager.cs" />
     <Compile Include="Data\Repositories\Repository.cs" />
+    <Compile Include="Dto\BaseDto.cs" />
+    <Compile Include="Dto\Missions\AddOrUpdateMissionDto.cs" />
+    <Compile Include="Dto\Missions\MissionSelectDto.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\IEntity.cs" />
     <Compile Include="Entities\Mission.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="resources\App_LocalResources\ModelValidation.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelValidation.resx</DependentUpon>
-    </Compile>
     <Compile Include="Services\IMissionService.cs" />
     <Compile Include="Services\IServiceManager.cs" />
     <Compile Include="Services\MissionService.cs" />
@@ -118,7 +117,8 @@
     <Resource Include="manifest.dnn" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Dto\" />
+    <Folder Include="App_LocalResources\" />
+    <Folder Include="resources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
@@ -128,12 +128,6 @@
     <Reference Include="System" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="resources\App_LocalResources\ModelValidation.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ModelValidation.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
