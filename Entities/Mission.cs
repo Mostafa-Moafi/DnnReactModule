@@ -1,12 +1,14 @@
 ﻿// MIT License
 using DotNetNuke.Entities.Users;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DnnReactDemo.Entities
 {
     /// <summary>
     /// Represents an Mission entity.
     /// </summary>
+    [Table("Mission")]
     public class Mission : BaseEntity
     {
         /// <summary>

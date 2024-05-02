@@ -29,7 +29,6 @@
             "AppVeyor",
             "AzurePipelines",
             "Bamboo",
-            "Bitbucket",
             "Bitrise",
             "GitHubActions",
             "GitLab",
@@ -72,8 +71,13 @@
           "items": {
             "type": "string",
             "enum": [
+              "BuildFrontEnd",
               "Clean",
               "Compile",
+              "Deploy",
+              "DeployBinaries",
+              "DeployFrontEnd",
+              "InstallNpmPackages",
               "Package",
               "Restore",
               "SetManifestVersions",
@@ -91,8 +95,13 @@
           "items": {
             "type": "string",
             "enum": [
+              "BuildFrontEnd",
               "Clean",
               "Compile",
+              "Deploy",
+              "DeployBinaries",
+              "DeployFrontEnd",
+              "InstallNpmPackages",
               "Package",
               "Restore",
               "SetManifestVersions",

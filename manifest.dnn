@@ -76,6 +76,15 @@
                 </moduleDefinition>
               </moduleDefinitions>
             </desktopModule>
+            <eventMessage>
+              <processorType>DotNetNuke.Entities.Modules.EventMessageProcessor, DotNetNuke</processorType>
+              <processorCommand>UpgradeModule</processorCommand>
+              <attributes>
+                <businessControllerClass>DnnReactDemo.Utilities.ConfigurationModule,DnnReactDemo</businessControllerClass>
+                <desktopModuleID>[DESKTOPMODULEID]</desktopModuleID>
+                <upgradeVersionsList>01.00.00</upgradeVersionsList>
+              </attributes>
+            </eventMessage>
           </component>
           <component type="Cleanup" version="01.00.00" glob="DesktopModules/DnnReactDemo/resources/**/*" />
           <component type="ResourceFile">

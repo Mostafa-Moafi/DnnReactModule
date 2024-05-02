@@ -9,7 +9,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace DnnReactDemo.Controllers
 {
-    [ModuleException, ResultAuthorize, ValidateModel, ValidateAntiForgeryToken]
+    [ModuleException, ResultAuthorize, ValidateModel]
     public abstract class ModuleApiController : DnnApiController
     {
         /// <summary>
