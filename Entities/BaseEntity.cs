@@ -3,7 +3,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DnnReactDemo.Entities
+namespace DnnReactModule.Entities
 {
     /// <summary>
     /// Base entity to provide common properties to other entities and allow it's usage in generic repositories.

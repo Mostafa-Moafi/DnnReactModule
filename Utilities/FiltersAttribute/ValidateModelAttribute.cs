@@ -1,7 +1,7 @@
 ﻿// MIT License
 
 using DotNetNuke.Services.Localization;
-using DnnReactDemo.Utilities.API;
+using DnnReactModule.Utilities.API;
 using Newtonsoft.Json;
 using System.Net;
 using System.Net.Http;
@@ -10,7 +10,7 @@ using System.Web.Hosting;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 
-namespace DnnReactDemo.Utilities.FiltersAttribute
+namespace DnnReactModule.Utilities.FiltersAttribute
 {
     /// <summary>
     /// Custom action filter attribute for validating model state before executing an action.

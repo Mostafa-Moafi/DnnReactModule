@@ -1,13 +1,13 @@
 ﻿// MIT License
 
-using DnnReactDemo.Utilities.FiltersAttribute;
+using DnnReactModule.Utilities.FiltersAttribute;
 using DotNetNuke.Entities.Users;
 using DotNetNuke.Security.Permissions;
 using DotNetNuke.Web.Api;
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace DnnReactDemo.Controllers
+namespace DnnReactModule.Controllers
 {
     [ModuleException, ResultAuthorize, ValidateModel]
     public abstract class ModuleApiController : DnnApiController

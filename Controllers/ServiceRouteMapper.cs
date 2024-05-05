@@ -1,9 +1,9 @@
 ﻿// MIT License
 
-using DnnReactDemo.Utilities;
+using DnnReactModule.Utilities;
 using DotNetNuke.Web.Api;
 
-namespace DnnReactDemo.Controllers
+namespace DnnReactModule.Controllers
 {
     /// <summary>
     /// Implements the Dnn IServiceRouteMapper to register this module routes.

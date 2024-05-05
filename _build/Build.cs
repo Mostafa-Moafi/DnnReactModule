@@ -257,8 +257,8 @@ class Build : NukeBuild
             var swaggerFile = DocsDirectory / $"DnnReactDemo__{ModuleVersion}.json";
 
             NSwagTasks.NSwagWebApiToOpenApi(c => c
-                .AddAssembly(RootDirectory / "bin" / Configuration / "DnnReactDemo.dll")
-                .SetInfoTitle("DnnReactDemo")
+                .AddAssembly(RootDirectory / "bin" / Configuration / "DnnReactModule.dll")
+                .SetInfoTitle("DnnReactModule")
                 .SetInfoVersion(ModuleVersion)
                 .SetProcessArgumentConfigurator(a => a.Add("/DefaultUrlTemplate:{{controller}}/{{action}}"))
                 .SetOutput(swaggerFile));

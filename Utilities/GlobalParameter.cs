@@ -1,6 +1,6 @@
 ﻿// MIT License
 
-namespace DnnReactDemo.Utilities
+namespace DnnReactModule.Utilities
 {
     /// <summary>
     /// GlobalParameter class containing constant values used throughout the module.
@@ -8,7 +8,7 @@ namespace DnnReactDemo.Utilities
 
     public static class GlobalParameter
     {
-        public const string ModuleName = "DnnReactDemo";
+        public const string ModuleName = "DnnReactModule";
 
     }
 }

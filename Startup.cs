@@ -1,13 +1,13 @@
-﻿using DnnReactDemo.Data;
-using DnnReactDemo.Data.IRepositories;
-using DnnReactDemo.Data.Repositories;
-using DnnReactDemo.Services;
+﻿using DnnReactModule.Data;
+using DnnReactModule.Data.IRepositories;
+using DnnReactModule.Data.Repositories;
+using DnnReactModule.Services;
 using DotNetNuke.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using System.Web.Http;
 
-namespace DnnReactDemo
+namespace DnnReactModule
 {
     /// <summary>
     /// Class implementing IDnnStartup interface for configuring services in a DNN module startup.

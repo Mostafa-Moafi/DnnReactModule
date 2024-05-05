@@ -3,7 +3,7 @@
 using System;
 using System.Linq;
 
-namespace DnnReactDemo.Utilities.Helper
+namespace DnnReactModule.Utilities.Helper
 {
     /// <summary>
     /// Helper class for string manipulation and conversion.

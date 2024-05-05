@@ -1,9 +1,9 @@
 ﻿// MIT License
 
-using DnnReactDemo.Entities;
+using DnnReactModule.Entities;
 using System.Data.Entity;
 
-namespace DnnReactDemo.Data
+namespace DnnReactModule.Data
 {
     /// <summary>
     /// The data context for this module.

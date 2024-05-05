@@ -1,8 +1,8 @@
 ﻿// MIT License
 
 using DotNetNuke.Instrumentation;
-using DnnReactDemo.Utilities.API;
-using DnnReactDemo.Utilities.Exceptions;
+using DnnReactModule.Utilities.API;
+using DnnReactModule.Utilities.Exceptions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.Filters;
 
-namespace DnnReactDemo.Utilities.FiltersAttribute
+namespace DnnReactModule.Utilities.FiltersAttribute
 {
     /// <summary>
     /// Handles exceptions on API endpoint calls.

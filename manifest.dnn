@@ -1,6 +1,6 @@
 <dotnetnuke version="5.0" type="Package">
   <packages>
-    <package name="DnnReactDemo" type="Module" version="01.00.00">
+    <package name="DnnReactModule" type="Module" version="01.00.00">
       <friendlyName>DNN React Demo</friendlyName>
       <description>Professional REST API and React DNN Module</description>
       <owner>
@@ -19,7 +19,7 @@
       <components>
         <component type="Script">
           <scripts>
-            <basePath>DesktopModules\DnnReactDemo\SqlDataProviders</basePath>
+            <basePath>DesktopModules\DnnReactModule\SqlDataProviders</basePath>
             <script type="Install">
               <name>01.00.00.SqlDataProvider</name>
               <version>01.00.00</version>
@@ -29,7 +29,7 @@
           <component type="Assembly">
             <assemblies>
               <assembly>
-                <name>DnnReactDemo.dll</name>
+                <name>DnnReactModule.dll</name>
                 <path>bin</path>
               </assembly>
               <assembly>
@@ -56,7 +56,7 @@
           <component type="Module">
             <desktopModule>
               <moduleName>DNN React API Demo</moduleName>
-              <foldername>DnnReactDemo</foldername>
+              <foldername>DnnReactModule</foldername>
               <moduleDefinitions>
                 <moduleDefinition>
                   <friendlyName>DNN React API Demo</friendlyName>
@@ -64,7 +64,7 @@
                   <moduleControls>
                     <moduleControl>
                       <controlKey />
-                      <controlSrc>DesktopModules/DnnReactDemo/resources/index.html</controlSrc>
+                      <controlSrc>DesktopModules/DnnReactModule/resources/index.html</controlSrc>
                       <supportsPartialRendering>False</supportsPartialRendering>
                       <controlTitle />
                       <controlType>View</controlType>
@@ -80,16 +80,16 @@
               <processorType>DotNetNuke.Entities.Modules.EventMessageProcessor, DotNetNuke</processorType>
               <processorCommand>UpgradeModule</processorCommand>
               <attributes>
-                <businessControllerClass>DnnReactDemo.Utilities.ConfigurationModule,DnnReactDemo</businessControllerClass>
+                <businessControllerClass>DnnReactModule.Utilities.ConfigurationModule,DnnReactModule</businessControllerClass>
                 <desktopModuleID>[DESKTOPMODULEID]</desktopModuleID>
                 <upgradeVersionsList>01.00.00</upgradeVersionsList>
               </attributes>
             </eventMessage>
           </component>
-          <component type="Cleanup" version="01.00.00" glob="DesktopModules/DnnReactDemo/resources/**/*" />
+          <component type="Cleanup" version="01.00.00" glob="DesktopModules/DnnReactModule/resources/**/*" />
           <component type="ResourceFile">
             <resourceFiles>
-              <basePath>DesktopModules/DnnReactDemo/resources</basePath>
+              <basePath>DesktopModules/DnnReactModule/resources</basePath>
               <resourceFile>
                 <name>resources.zip</name>
               </resourceFile>

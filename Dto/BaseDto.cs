@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using DnnReactDemo.Utilities.CustomMapping;
+using DnnReactModule.Utilities.CustomMapping;
 
-namespace DnnReactDemo.Dto
+namespace DnnReactModule.Dto
 {
     public abstract class BaseDto<TDto, TEntity> : IHaveCustomMapping
         where TDto : class, new()

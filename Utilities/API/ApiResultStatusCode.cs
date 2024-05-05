@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DnnReactDemo.Utilities.API
+namespace DnnReactModule.Utilities.API
 {
     public enum ApiResultStatusCode
     {

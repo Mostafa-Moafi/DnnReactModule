@@ -1,10 +1,10 @@
 ﻿// MIT License
 
-using DnnReactDemo.Utilities.Helper;
+using DnnReactModule.Utilities.Helper;
 using Newtonsoft.Json;
 using System.Web.Http.Results;
 
-namespace DnnReactDemo.Utilities.API
+namespace DnnReactModule.Utilities.API
 {
     /// <summary>
     /// Represents the result of an API operation, including success status, status code, and optional message.

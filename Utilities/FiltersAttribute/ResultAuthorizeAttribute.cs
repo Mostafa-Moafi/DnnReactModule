@@ -1,14 +1,14 @@
 ﻿// MIT License
 
 using DotNetNuke.Web.Api;
-using DnnReactDemo.Utilities.API;
-using DnnReactDemo.Utilities.Helper;
+using DnnReactModule.Utilities.API;
+using DnnReactModule.Utilities.Helper;
 using Newtonsoft.Json;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http.Controllers;
 
-namespace DnnReactDemo.Utilities.FiltersAttribute
+namespace DnnReactModule.Utilities.FiltersAttribute
 {
     /// <summary>
     /// Custom authorization attribute that extends AuthorizeAttributeBase and implements authorization logic based on DnnAuthorizeAttribute.

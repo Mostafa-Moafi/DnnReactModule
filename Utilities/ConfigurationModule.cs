@@ -5,7 +5,7 @@ using DotNetNuke.Instrumentation;
 using System;
 using System.Xml;
 
-namespace DnnReactDemo.Utilities
+namespace DnnReactModule.Utilities
 {
     /// <summary>
     /// Represents a configuration module that implements the IUpgradeable interface for upgrading modules.

@@ -1,6 +1,6 @@
-﻿using DnnReactDemo.Entities;
+﻿using DnnReactModule.Entities;
 
-namespace DnnReactDemo.Dto.Missions
+namespace DnnReactModule.Dto.Missions
 {
     public class MissionSelectDto : BaseDto<MissionSelectDto, Mission>
     {

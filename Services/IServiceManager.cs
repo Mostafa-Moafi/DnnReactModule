@@ -1,6 +1,6 @@
 ﻿// MIT License
 
-namespace DnnReactDemo.Services
+namespace DnnReactModule.Services
 {
     public interface IServiceManager
     {

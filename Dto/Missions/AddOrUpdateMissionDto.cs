@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DnnReactDemo.Dto.Missions
+namespace DnnReactModule.Dto.Missions
 {
     public class AddOrUpdateMissionDto : BaseDto<AddOrUpdateMissionDto, Entities.Mission>
     {

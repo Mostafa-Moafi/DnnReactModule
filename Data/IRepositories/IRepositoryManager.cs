@@ -2,7 +2,7 @@
 
 using System.Threading.Tasks;
 
-namespace DnnReactDemo.Data.IRepositories
+namespace DnnReactModule.Data.IRepositories
 {
     /// <summary>
     /// Interface for managing repositories, provides access to repositories and methods for saving changes synchronously and asynchronously.

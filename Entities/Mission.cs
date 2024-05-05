@@ -3,7 +3,7 @@ using DotNetNuke.Entities.Users;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DnnReactDemo.Entities
+namespace DnnReactModule.Entities
 {
     /// <summary>
     /// Represents an Mission entity.

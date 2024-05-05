@@ -6,7 +6,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace DnnReactDemo.Utilities.CustomMapping
+namespace DnnReactModule.Utilities.CustomMapping
 {
     public static class AutoMapperConfiguration
     {

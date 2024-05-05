@@ -1,15 +1,15 @@
 ﻿// MIT License
 
-using DnnReactDemo.Dto.Missions;
-using DnnReactDemo.Services;
-using DnnReactDemo.Utilities.API;
+using DnnReactModule.Dto.Missions;
+using DnnReactModule.Services;
+using DnnReactModule.Utilities.API;
 using DotNetNuke.Security;
 using DotNetNuke.Web.Api;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace DnnReactDemo.Controllers
+namespace DnnReactModule.Controllers
 {
     [DnnAuthorize(StaticRoles = "Registered Users")]
     public class MissionController : ModuleApiController

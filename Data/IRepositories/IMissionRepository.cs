@@ -1,10 +1,10 @@
 ﻿// MIT License
 
-using DnnReactDemo.Entities;
+using DnnReactModule.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace DnnReactDemo.Data.IRepositories
+namespace DnnReactModule.Data.IRepositories
 {
     public interface IMissionRepository : IRepository<Mission>
     {

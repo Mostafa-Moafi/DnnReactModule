@@ -2,7 +2,7 @@
 
 using System;
 
-namespace DnnReactDemo.Entities
+namespace DnnReactModule.Entities
 {
     /// <summary>
     /// Ensures entities have some common properties.

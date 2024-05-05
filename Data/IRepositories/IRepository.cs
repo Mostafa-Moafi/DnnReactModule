@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 
-namespace DnnReactDemo.Data.IRepositories
+namespace DnnReactModule.Data.IRepositories
 {
     /// <summary>
     /// Interface for a generic repository that defines common CRUD operations for entities.

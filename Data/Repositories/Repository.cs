@@ -1,12 +1,12 @@
 ﻿// MIT License
 
-using DnnReactDemo.Utilities;
+using DnnReactModule.Utilities;
 using System.Collections.Generic;
 using System.Linq;
-using DnnReactDemo.Data.IRepositories;
+using DnnReactModule.Data.IRepositories;
 using System.Data.Entity;
 
-namespace DnnReactDemo.Data.Repositories
+namespace DnnReactModule.Data.Repositories
 {
     /// <summary>
     /// Generic repository class that implements IRepository interface for CRUD operations on entities of type TEntity.

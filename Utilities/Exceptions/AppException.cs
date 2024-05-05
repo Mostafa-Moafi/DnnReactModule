@@ -1,10 +1,10 @@
 ﻿// MIT License
 
-using DnnReactDemo.Utilities.API;
+using DnnReactModule.Utilities.API;
 using System;
 using System.Net;
 
-namespace DnnReactDemo.Utilities.Exceptions
+namespace DnnReactModule.Utilities.Exceptions
 {
     /// <summary>
     /// Custom exception class for handling application-specific exceptions with additional data and status codes.

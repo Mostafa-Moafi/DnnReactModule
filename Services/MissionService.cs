@@ -1,16 +1,16 @@
 ﻿// MIT License
 
 using AutoMapper;
-using DnnReactDemo.Data.IRepositories;
-using DnnReactDemo.Dto.Missions;
-using DnnReactDemo.Entities;
-using DnnReactDemo.Utilities.Exceptions;
+using DnnReactModule.Data.IRepositories;
+using DnnReactModule.Dto.Missions;
+using DnnReactModule.Entities;
+using DnnReactModule.Utilities.Exceptions;
 using DotNetNuke.Entities.Users;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace DnnReactDemo.Services
+namespace DnnReactModule.Services
 {
     public class MissionService : IMissionService
     {

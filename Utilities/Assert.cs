@@ -4,7 +4,7 @@ using System;
 using System.Collections;
 using System.Linq;
 
-namespace DnnReactDemo.Utilities
+namespace DnnReactModule.Utilities
 {
     /// <summary>
     /// Contains methods for asserting that objects are not null or empty.

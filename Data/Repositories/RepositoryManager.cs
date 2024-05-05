@@ -1,9 +1,9 @@
 ﻿// MIT License
 
-using DnnReactDemo.Data.IRepositories;
+using DnnReactModule.Data.IRepositories;
 using System.Threading.Tasks;
 
-namespace DnnReactDemo.Data.Repositories
+namespace DnnReactModule.Data.Repositories
 {
     public class RepositoryManager : IRepositoryManager
     {

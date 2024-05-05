@@ -2,7 +2,7 @@
 
 using AutoMapper;
 
-namespace DnnReactDemo.Utilities.CustomMapping
+namespace DnnReactModule.Utilities.CustomMapping
 {
     public interface IHaveCustomMapping
     {

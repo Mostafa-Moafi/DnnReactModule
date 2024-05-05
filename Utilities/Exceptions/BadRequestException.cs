@@ -1,9 +1,9 @@
 ﻿// MIT License
 
-using DnnReactDemo.Utilities.API;
+using DnnReactModule.Utilities.API;
 using System;
 
-namespace DnnReactDemo.Utilities.Exceptions
+namespace DnnReactModule.Utilities.Exceptions
 {
     /// <summary>
     /// Represents a custom exception for handling bad request scenarios in the module.

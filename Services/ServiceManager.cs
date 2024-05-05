@@ -1,10 +1,10 @@
 ﻿// MIT License
 
 using AutoMapper;
-using DnnReactDemo.Data.IRepositories;
-using DnnReactDemo.Utilities.CustomMapping;
+using DnnReactModule.Data.IRepositories;
+using DnnReactModule.Utilities.CustomMapping;
 
-namespace DnnReactDemo.Services
+namespace DnnReactModule.Services
 {
     public class ServiceManager : IServiceManager
     {

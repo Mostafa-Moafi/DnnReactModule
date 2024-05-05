@@ -10,8 +10,8 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RuntimeIdentifier>win</RuntimeIdentifier>
-    <RootNamespace>DnnReactDemo</RootNamespace>
-    <AssemblyName>DnnReactDemo</AssemblyName>
+    <RootNamespace>DnnReactModule</RootNamespace>
+    <AssemblyName>DnnReactModule</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -26,7 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>0</WarningLevel>
-    <DocumentationFile>bin\Debug\DnnReactDemo.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\DnnReactModule.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -36,7 +36,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>0</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Release\DnnReactDemo.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\DnnReactModule.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper">

@@ -1,11 +1,11 @@
 ﻿// MIT License
 
-using DnnReactDemo.Dto.Missions;
+using DnnReactModule.Dto.Missions;
 using DotNetNuke.Entities.Users;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace DnnReactDemo.Services
+namespace DnnReactModule.Services
 {
     public interface IMissionService
     {
