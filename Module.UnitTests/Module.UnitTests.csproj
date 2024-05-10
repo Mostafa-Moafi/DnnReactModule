@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\GlobalParameterTests.cs" />
     <PackageReference Include="DotNetNuke.Core">
       <Version>9.13.3</Version>
     </PackageReference>
@@ -79,6 +80,12 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Module.csproj">
+      <Project>{10231BA9-FC7D-41E5-8F7E-8739D7D0C455}</Project>
+      <Name>Module</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
