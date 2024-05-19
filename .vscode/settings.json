@@ -1,0 +1,8 @@
+{
+    "codeBlocks.ignoredLanguageIds": [
+        "javascript",
+        "markdown",
+        "json",
+        "plaintext"
+    ]
+}
