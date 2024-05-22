@@ -18,6 +18,7 @@ module.exports = (env, argv) => {
             path: path.resolve("../resources/js")
 
         },
+        
         resolve: {
             extensions: ['*', '.js', '.jsx'],
         },
