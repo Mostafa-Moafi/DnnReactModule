@@ -1,6 +1,6 @@
 <dotnetnuke version="5.0" type="Package">
   <packages>
-    <package name="DnnReactModule" type="Module" version="01.00.00">
+    <package name="DnnReactModule" type="Module" version="01.00.01">
       <friendlyName>DNN React Demo</friendlyName>
       <description>Professional REST API and React DNN Module</description>
       <owner>
