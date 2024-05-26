@@ -1,26 +1,23 @@
 import { Stack, TextField } from "@mui/material";
 import React, { useState } from "react";
 
-export default function AddTask() {
-
-    const [title, setTitle] = useState("")
-    const [description, setDescription] = useState("")
+export default function AddTask({ form, setForm }) {
 
     return (
-        <Stack sx={{py: 1.5}} spacing={2}>
+        <Stack sx={{py: 1.5}} spacing={2} >
             <TextField
                 id="title-form"
                 label="Title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                value={form.title}
+                onChange={(e) => setForm({...form, title: e.target.value})}
                 size="small"
                 sx={{width: "100%"}}
             />
             <TextField
                 id="description"
                 label="Description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                value={form.desc}
+                onChange={(e) => setForm({...form, desc: e.target.value})}
                 size="small"
                 multiline
                 minRows={3}

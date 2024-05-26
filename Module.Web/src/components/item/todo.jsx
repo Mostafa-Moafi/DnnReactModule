@@ -1,36 +1,23 @@
-import { Stack, styled, FormControlLabel, Checkbox, Typography, IconButton } from "@mui/material";
 import React, { useState } from "react";
+import { Stack, styled, FormControlLabel, Checkbox, Typography, IconButton } from "@mui/material";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-export default function TodoItem({ data }) {
-
-    const [selected, setSelected] = useState(false)
-
-    const select = (e, value) => {
-        setSelected(value)
-    }
+export default function TodoItem({ data, remove, handleModal, setForm }) {
 
     return (
         <Item>
             <Stack direction="row" alignItems="center" spacing={1}>
-                <Checkbox
-                    value={selected}
-                    checked={selected}
-                    onChange={select}
-                    color="primary"
-                    size="small"
-                />
                 <Stack direction="row" sx={{flex: 1}} justifyContent="space-between" alignItems="center">
                     <Stack>
-                        <Typography variant="body1" color="initial">{data.title}</Typography>
-                        <Typography variant="caption" color="initial">{data.timeAdded}</Typography>
+                        <Typography variant="body1" color="initial">{data.Description}</Typography>
+                        <Typography variant="caption" color="initial">{data.Title}</Typography>
                     </Stack>
                     <Stack direction="row" alignItems="center" >
-                        <IconButton>
+                        <IconButton onClick={() => remove(data.Id)}>
                             <DeleteIcon />
                         </IconButton>
-                        <IconButton>
+                        <IconButton onClick={() => {setForm({desc: data.Description, title: data.Title, id: data.Id}); handleModal(true)}}>
                             <EditIcon />
                         </IconButton>
                     </Stack>

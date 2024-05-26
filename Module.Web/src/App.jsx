@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Stack, Typography, Button, styled, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from "@mui/material"
 import useAddTodo from "./services/hooks/useAddTodo"
 import TodoItem from "./components/item/todo"
 import useModal from "./services/hooks/useModal"
 import AddTask from "./components/forms/addTask"
+import {ApiUrls} from "./services/api/urls"
+import { get } from './services/api/method';
+
+
 
 export default function App() {
 
 	const [{open}, handleModal] = useModal()
-	const [{list}, {add, edit, remove}] = useAddTodo()
+	const [{list, form}, {addOrEdit, edit, remove, setForm}] = useAddTodo(handleModal)
 
 	return (
 		<Stack sx={{p: 6}} alignItems="center" spacing={4} >
@@ -23,9 +27,13 @@ export default function App() {
 					{
 						list.map((val, i) => {
 							return (
-								<TodoItem key={i} data={val} />
+								<TodoItem handleModal={handleModal} setForm={setForm} remove={remove} key={i} data={val} />
 							)
 						})
+					}
+					{
+						list.length == 0 &&
+						<Typography variant="body1" color="initial" sx={{p: 2, textAlign: "center", color: "#666"}}>No todo added !</Typography>
 					}
 				</TodoContainer>
 				<Dialog 
@@ -38,23 +46,23 @@ export default function App() {
 				  	</DialogTitle>
 				  	<DialogContent sx={{width: "500px"}}>
 						<DialogContentText>
-							<AddTask />
+							<AddTask form={form} setForm={setForm} />
 						</DialogContentText>
 				  	</DialogContent>
 				  	<DialogActions>
 						<Button
-						  	onClick={() => handleModal(false)}
+						  	onClick={() => {handleModal(false); setForm({desc: "", title: ""})}}
 						  	color="primary"
 							sx={{mr: 1}}
 						>
 						  	Cancel
 						</Button>
 						<Button
-						  	onClick={() => handleModal(false)}
+						  	onClick={() => addOrEdit()}
 						  	color="primary"
 							variant="contained"
 						>
-						  	Add
+						  	{form.id ? "Edit" : "Add"}
 						</Button>
 				  	</DialogActions>
 				</Dialog>

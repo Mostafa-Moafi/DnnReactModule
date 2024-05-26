@@ -1,5 +1,7 @@
 {
     "codeBlocks.ignoredLanguageIds": [
+        "javascriptreact",
+        "css",
         "javascript",
         "markdown",
         "json",
