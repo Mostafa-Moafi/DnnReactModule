@@ -1,42 +1,50 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { deleteMethod, get, post, put } from "../api/method"
+import { ApiUrls } from "../api/urls"
 
-export default function useAddTodo() {
+export default function useAddTodo(handleModal) {
 
-    const [list, setList] = useState([
-        {
-            id: 1,
-            title: "testy todo list my todo number 1",
-            timeAdded: "2024/5/10"
-        },
-        {
-            id: 2,
-            title: "testy todo list todo number 2",
-            timeAdded: "2025/5/23"
-        },
-        {
-            id: 3,
-            title: "testy todo list shopping",
-            timeAdded: "2024/5/10"
-        },
-        {
-            id: 4,
-            title: "testy todo list",
-            timeAdded: "2024/5/10"
-        },
-    ])
+    const [list, setList] = useState([])
+    const [form, setForm] = useState({title: "", desc: "", id: null})
 
-    const add = (data) => {
-        setList([...list, data])
+    const addOrEdit = () => {
+        const bodyObj = {
+            "Title": form.title,
+            "Description": form.desc
+        }
+        if(form.id) {
+            put(`${ApiUrls.Update}?id=${form.id}`, bodyObj).then(() => reset())
+        } else {
+            post(ApiUrls.Add, bodyObj).then(() => reset())
+        }
     }
 
     const edit = () => {
+        handleModal(true)
         console.log("eddited");
     }
 
-    const remove = (data) => {
-        const newData = list.filter((e) => e.id != data.id) 
-        setList(newData)
+    const remove = (id) => {
+        deleteMethod(`${ApiUrls.Delete}?id=${id}`).then((res) => {
+            getList()
+        })
     }
 
-    return [{list}, {add, edit, remove}]
+    const getList = () => {
+		get(ApiUrls.Get).then((res) => {
+            setList(res.Data)
+        })
+    }
+
+    const reset = () => {
+        handleModal(false)
+        getList()
+        setForm({title: "", desc: "", id: null})
+    }
+
+    useEffect(() => {
+        getList()
+	}, [])
+
+    return [{list, form}, {addOrEdit, edit, remove, setForm}]
 }
