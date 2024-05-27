@@ -1,6 +1,6 @@
 <dotnetnuke version="5.0" type="Package">
   <packages>
-    <package name="DnnReactModule" type="Module" version="01.00.01">
+    <package name="DnnReactModule" type="Module" version="01.00.02">
       <friendlyName>DNN React Demo</friendlyName>
       <description>Professional REST API and React DNN Module</description>
       <owner>
@@ -22,7 +22,7 @@
             <basePath>DesktopModules\DnnReactModule\SqlDataProviders</basePath>
             <script type="Install">
               <name>01.00.00.SqlDataProvider</name>
-              <version>01.00.00</version>
+              <version>01.00.02</version>
             </script>
           </scripts>
         </component>
@@ -86,7 +86,7 @@
               </attributes>
             </eventMessage>
           </component>
-          <component type="Cleanup" version="01.00.00" glob="DesktopModules/DnnReactModule/resources/**/*" />
+          <component type="Cleanup" version="01.00.02" glob="DesktopModules/DnnReactModule/resources/**/*" />
           <component type="ResourceFile">
             <resourceFiles>
               <basePath>DesktopModules/DnnReactModule/resources</basePath>
